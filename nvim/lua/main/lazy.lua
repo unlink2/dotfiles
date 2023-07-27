@@ -82,7 +82,10 @@ plugins = {
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     opts = {
     }
-  }
+  },
+  { "folke/neodev.nvim",    opts = {} },
+  { "mfussenegger/nvim-dap" },
+  { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 }
 
 require("lazy").setup(plugins)
