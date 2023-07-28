@@ -1,5 +1,7 @@
 require("dapui").setup()
 
+local path = vim.fn.stdpath('data')
+
 local dap = require('dap')
 
 dap.adapters.lldb = {
@@ -8,10 +10,23 @@ dap.adapters.lldb = {
   name = 'lldb'
 }
 
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+  executable = {
+    -- CHANGE THIS to your path!
+    command = path .. '/mason/bin/codelldb',
+    args = { "--port", "${port}" },
+
+    -- On windows you may have to uncomment this:
+    -- detached = false,
+  }
+}
+
 dap.configurations.cpp = {
   {
     name = 'Launch',
-    type = 'lldb',
+    type = 'codelldb',
     request = 'launch',
     program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
