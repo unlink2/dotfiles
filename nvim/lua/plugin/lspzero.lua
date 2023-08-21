@@ -20,7 +20,13 @@ lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp.default_keymaps({ buffer = bufnr })
-  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
+  -- autocmd format on save
+  -- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+  vim.keymap.set('n', 'gp',
+    function()
+      vim.lsp.buf.format()
+    end, { buffer = true })
 end)
 
 
