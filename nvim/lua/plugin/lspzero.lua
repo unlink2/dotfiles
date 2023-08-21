@@ -24,9 +24,13 @@ lsp.on_attach(function(client, bufnr)
   -- autocmd format on save
   -- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
   vim.keymap.set('n', 'gp',
+    vim.lsp.buf.format, { buffer = true })
+
+  vim.api.nvim_create_user_command("W",
     function()
       vim.lsp.buf.format()
-    end, { buffer = true })
+      vim.cmd('w')
+    end, { nargs = 0, desc = 'Write and format' })
 end)
 
 
