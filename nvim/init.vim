@@ -24,7 +24,7 @@ nnoremap <leader>td <C-]>
 " return from def 
 nnoremap <leader>tr <C-t> 
 " open tag in window 
-nnoremap <leader>tj <C-w><C-}> 
+nnoremap <leader>tg <C-w><C-}> 
 
 " settings 
 set termguicolors
