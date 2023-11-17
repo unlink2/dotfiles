@@ -7,6 +7,9 @@ nnoremap <leader>fv :!make lint
 nnoremap <leader>ft :!make tags<CR><CR>
 nnoremap <leader>fx :!make
 
+nnoremap <leader>fb :b 
+
+
 " ctags 
 " tag next 
 nnoremap <leader>tn :tn<CR>
@@ -18,7 +21,8 @@ nnoremap <leader>ts :ts
 nnoremap <leader>td <C-]> 
 " return from def 
 nnoremap <leader>tr <C-t> 
-
+" open tag in window 
+nnoremap <leader>ts <C-w><C-}> 
 
 " settings 
 set termguicolors
