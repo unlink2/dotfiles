@@ -9,6 +9,8 @@ nnoremap <leader>fx :!make
 
 nnoremap <leader>fb :b 
 
+" clear highlight 
+nnoremap <leader>cs :noh<CR>
 
 " ctags 
 " tag next 
