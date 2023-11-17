@@ -18,7 +18,7 @@ nnoremap <leader>tn :tn<CR>
 " tag prev
 nnoremap <leader>tp :tp<CR>
 " tag search 
-nnoremap <leader>ts :ts 
+nnoremap <leader>ts :tselect 
 " go to def 
 nnoremap <leader>td <C-]> 
 " return from def 
