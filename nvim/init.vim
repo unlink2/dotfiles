@@ -26,6 +26,13 @@ nnoremap <leader>tr <C-t>
 " open tag in window 
 nnoremap <leader>tg <C-w><C-}> 
 
+" custom command
+
+" save session 
+command Ds mksession! .session
+" restore session 
+command Rs source .session
+
 " settings 
 set termguicolors
 set number
