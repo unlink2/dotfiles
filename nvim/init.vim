@@ -51,3 +51,5 @@ set updatetime=50
 
 " file type .sh (assembly header)
 autocmd BufEnter *.inc :setlocal filetype=asm
+autocmd VimResized * wincmd =
+
