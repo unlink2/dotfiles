@@ -2,10 +2,10 @@
 
 let mapleader = " "
 nnoremap <leader>ff :Ex<CR>
-nnoremap <leader>fc :!./ubuild format<CR><CR>
-nnoremap <leader>fv :!./ubuild lint
-nnoremap <leader>ft :!./ubuild tags<CR><CR>
-nnoremap <leader>fx :!./ubuild
+nnoremap <leader>fc :!make format<CR><CR>
+nnoremap <leader>fv :!make lint
+nnoremap <leader>ft :!make tags<CR><CR>
+nnoremap <leader>fx :!make
 
 " nnoremap <leader>fc :!make format<CR><CR>
 " nnoremap <leader>fv :!make lint
