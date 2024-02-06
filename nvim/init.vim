@@ -55,6 +55,11 @@ set incsearch
 set autoread
 set updatetime=50
 
+" enable Omni
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+autocmd CompleteDone * pclose
+
 " file type .sh (assembly header)
 autocmd BufEnter *.inc :setlocal filetype=asm
 autocmd VimResized * wincmd =
