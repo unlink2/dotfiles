@@ -7,6 +7,8 @@ nnoremap <leader>fv :!make lint
 nnoremap <leader>ft :!make tags<CR><CR>
 nnoremap <leader>fx :!make
 
+inoremap <C-Space> <C-x><C-o>
+
 " nnoremap <leader>fc :!make format<CR><CR>
 " nnoremap <leader>fv :!make lint
 " nnoremap <leader>ft :!make tags<CR><CR>
@@ -63,6 +65,10 @@ autocmd CompleteDone * pclose
 " file type .sh (assembly header)
 autocmd BufEnter *.inc :setlocal filetype=asm
 autocmd VimResized * wincmd =
+
+" Color Pmenu 
+hi Pmenu ctermbg=Blue guibg=Blue 
+hi PmenuSel ctermbg=Gray guibg=Gray
 
 " Nvim specific!
 " Simple LSP setup using nvim-lspconfig
