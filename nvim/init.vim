@@ -113,6 +113,9 @@ local ts_parser = vim.fn.expand("$HOME/.config/nvim-treesitter/")
 vim.opt.runtimepath:append(ts_parser)
 
 require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
   parser_install_dir = ts_parser,
 }
 
