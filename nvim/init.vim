@@ -72,8 +72,10 @@ hi PmenuSel ctermbg=Gray guibg=Gray
 
 " Nvim specific!
 " Simple LSP setup using nvim-lspconfig
+" Simple Treesitter setup
 
 lua << EOF
+-- lsp config
 local lspconfig = require('lspconfig')
 lspconfig.clangd.setup {}
 lspconfig.rust_analyzer.setup {}
@@ -105,4 +107,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+-- tresitter requires nvim-treesitter to be installed
+local ts_parser = vim.fn.expand("$HOME/.config/nvim-treesitter/")
+vim.opt.runtimepath:append(ts_parser)
+
+require'nvim-treesitter.configs'.setup {
+  parser_install_dir = ts_parser,
+}
+
 EOF
+
