@@ -1,3 +1,5 @@
+colorscheme vim
+
 " keymaps 
 
 let mapleader = " "
