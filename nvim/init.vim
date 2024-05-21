@@ -1,4 +1,4 @@
-colorscheme vim
+" colorscheme vim
 
 " keymaps 
 
