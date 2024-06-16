@@ -20,6 +20,8 @@ inoremap <C-Space> <C-x><C-o>
 
 " jj to press esc
 inoremap jj <ESC>
+" jj to press Ctrl+c in command mode
+cnoremap jj <C-C>
 
 nnoremap <leader>fb :b 
 
