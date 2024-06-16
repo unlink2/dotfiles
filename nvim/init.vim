@@ -1,5 +1,7 @@
 " colorscheme vim
 
+" timeout between commands
+set timeoutlen=500  
 " keymaps 
 
 let mapleader = " "
@@ -16,6 +18,8 @@ inoremap <C-Space> <C-x><C-o>
 " nnoremap <leader>ft :!make tags<CR><CR>
 " nnoremap <leader>fx :!make
 
+" jj to press esc
+inoremap jj <ESC>
 
 nnoremap <leader>fb :b 
 
